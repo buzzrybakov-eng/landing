@@ -4,186 +4,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>АМТ Ай — запускаем и развиваем проекты</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<meta name="description" content="АМТ Ай инвестирует в проекты в сфере недвижимости, строительных материалов и товаров для дома, развивает команды и помогает бизнесам занимать целевую долю рынка.">
+<link rel="alternate" hreflang="kk" href="./kk/">
+<link rel="alternate" hreflang="ru" href="./">
+<link rel="alternate" hreflang="en" href="./en/">
+<link rel="alternate" hreflang="x-default" href="./">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1B3A5C;
-    --navy-dark: #142C47;
-    --terra: #C4743E;
-    --terra-light: #D08A4E;
-    --steel: #5B7A99;
-    --sage: #8A9A7B;
-    --bg-warm: #F7F6F4;
-    --text: #2E2E2E;
-    --text-muted: #5A5A5A;
-    --white: #FFFFFF;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Golos Text', 'Segoe UI', Arial, sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.6;
-  }
-  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-  section { padding: 88px 0; }
-  .section-label {
-    display: inline-block;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--terra);
-    margin-bottom: 16px;
-    font-weight: 500;
-  }
-  h2 { font-size: 34px; line-height: 1.2; font-weight: 700; margin-bottom: 20px; }
-  h2 + .lead { font-size: 18px; color: var(--text-muted); max-width: 640px; }
-  p.body-text { color: var(--text-muted); max-width: 640px; }
-
-  /* ---------- 1. Hero ---------- */
-  .hero {
-    background: var(--navy);
-    color: var(--white);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: "";
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 56px 56px;
-    pointer-events: none;
-  }
-  .hero-inner {
-    position: relative;
-    padding: 160px 24px 120px;
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-  .hero .brand {
-    position: absolute;
-    top: 32px; left: 24px;
-    font-size: 18px; font-weight: 700;
-    color: var(--white);
-  }
-  .hero .brand span { color: var(--terra-light); }
-  .hero h1 { font-size: 52px; line-height: 1.12; font-weight: 700; max-width: 720px; margin-bottom: 28px; }
-  .hero h1 em { font-style: normal; color: var(--terra-light); }
-  .hero p { font-size: 19px; color: rgba(255,255,255,0.78); max-width: 560px; }
-  .hero-rule { width: 64px; height: 4px; background: var(--terra); margin-bottom: 32px; }
-
-  /* ---------- 2. People ---------- */
-  .people { background: var(--white); }
-  .people-grid { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: center; }
-
-  /* ---------- 3. Directions ---------- */
-  .directions { background: var(--bg-warm); }
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-  .card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 32px 28px 36px;
-    border-top: 4px solid var(--steel);
-    box-shadow: 0 1px 3px rgba(27,58,92,0.06);
-  }
-  .card.c2 { border-top-color: var(--terra); }
-  .card.c3 { border-top-color: var(--sage); }
-  .card-mark { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
-  .card.c1 .card-mark { color: var(--steel); }
-  .card.c2 .card-mark { color: var(--terra); }
-  .card.c3 .card-mark { color: var(--sage); }
-  .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
-  .card p { font-size: 15px; color: var(--text-muted); }
-
-  /* ---------- 4. Process ---------- */
-  .process { background: var(--white); }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 56px; position: relative; }
-  .step { padding-top: 28px; position: relative; }
-  .step::before {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 24px;
-    height: 2px; background: #E4E1DC;
-  }
-  .step:first-child::before { background: var(--terra); }
-  .step-num {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--navy); color: var(--white);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 16px;
-    margin: -14px 0 20px;
-    position: relative; z-index: 1;
-  }
-  .step:first-child .step-num { background: var(--terra); }
-  .step h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
-  .step p { font-size: 14.5px; color: var(--text-muted); }
-
-  /* ---------- 5. Principles ---------- */
-  .principles { background: var(--navy); color: var(--white); }
-  .principles .section-label { color: var(--terra-light); }
-  .principles h2 { color: var(--white); }
-  .principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
-  .principle {
-    border-left: 3px solid var(--terra);
-    padding-left: 28px;
-  }
-  .principle h3 { font-size: 21px; font-weight: 700; margin-bottom: 12px; }
-  .principle p { color: rgba(255,255,255,0.75); font-size: 15.5px; max-width: 460px; }
-
-  /* ---------- 6. Participation ---------- */
-  .participate { background: var(--bg-warm); text-align: center; }
-  .participate p { margin: 0 auto; }
-
-  /* ---------- 7. Contacts ---------- */
-  .contacts { background: var(--white); }
-  .contacts-box {
-    background: var(--bg-warm);
-    border-radius: 12px;
-    padding: 48px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-    margin-top: 48px;
-  }
-  .contacts-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
-  .contacts-box dl { font-size: 15.5px; }
-  .contacts-box dt { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; margin-top: 18px; }
-  .contacts-box dt:first-child { margin-top: 0; }
-  .contacts-box dd { font-weight: 500; }
-  .contacts-box a { color: var(--terra); text-decoration: none; font-size: 20px; font-weight: 700; }
-  .contacts-box a:hover { text-decoration: underline; }
-
-  footer {
-    background: var(--navy-dark);
-    color: rgba(255,255,255,0.55);
-    font-size: 13.5px;
-    padding: 28px 0;
-  }
-  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-  @media (max-width: 900px) {
-    section { padding: 64px 0; }
-    .hero h1 { font-size: 36px; }
-    .hero-inner { padding: 120px 24px 80px; }
-    .people-grid, .principles-grid, .contacts-box { grid-template-columns: 1fr; }
-    .cards { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: 1fr 1fr; }
-    h2 { font-size: 28px; }
-  }
-  @media (max-width: 560px) {
-    .steps { grid-template-columns: 1fr; }
-  }
-</style>
-<base target="_blank">
+<link rel="stylesheet" href="./styles.css">
+<script src="./settings.js" defer></script>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="flag-kk" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#00AFCA"></rect>
+      <rect x="2.1" width="2.2" height="19" fill="#FEC50C"></rect>
+      <g fill="#00AFCA">
+        <circle cx="3.2" cy="2.6" r="0.62"></circle>
+        <circle cx="3.2" cy="5.8" r="0.62"></circle>
+        <circle cx="3.2" cy="9" r="0.62"></circle>
+        <circle cx="3.2" cy="12.2" r="0.62"></circle>
+        <circle cx="3.2" cy="15.4" r="0.62"></circle>
+      </g>
+      <g stroke="#FEC50C" stroke-width="0.55" stroke-linecap="round">
+        <line x1="14" y1="3.6" x2="14" y2="2"></line>
+        <line x1="14" y1="10.4" x2="14" y2="12"></line>
+        <line x1="10.5" y1="7" x2="8.9" y2="7"></line>
+        <line x1="17.5" y1="7" x2="19.1" y2="7"></line>
+        <line x1="11.5" y1="4.5" x2="10.4" y2="3.4"></line>
+        <line x1="16.5" y1="4.5" x2="17.6" y2="3.4"></line>
+        <line x1="11.5" y1="9.5" x2="10.4" y2="10.6"></line>
+        <line x1="16.5" y1="9.5" x2="17.6" y2="10.6"></line>
+      </g>
+      <circle cx="14" cy="7" r="2.2" fill="#FEC50C"></circle>
+      <path d="M8.3 12.2c1.5-1.2 3-1.4 4.4-.4 1.3-1 2.9-.9 4.5.4-1.3-.1-2.3.2-2.9 1-1.2 1.5-3.1 1.5-4.3 0-.5-.8-.7-1-1.7-1Z" fill="#FEC50C"></path>
+    </symbol>
+    <symbol id="flag-ru" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#FFFFFF"></rect>
+      <rect y="6.34" width="26" height="6.33" fill="#0039A6"></rect>
+      <rect y="12.67" width="26" height="6.33" fill="#D52B1E"></rect>
+    </symbol>
+    <symbol id="flag-us" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#FFFFFF"></rect>
+      <g fill="#B31942">
+        <rect width="26" height="1.47"></rect>
+        <rect y="2.93" width="26" height="1.47"></rect>
+        <rect y="5.86" width="26" height="1.47"></rect>
+        <rect y="8.79" width="26" height="1.47"></rect>
+        <rect y="11.72" width="26" height="1.47"></rect>
+        <rect y="14.65" width="26" height="1.47"></rect>
+        <rect y="17.58" width="26" height="1.42"></rect>
+      </g>
+      <rect width="10.4" height="10.27" fill="#0A3161"></rect>
+      <g fill="#FFFFFF">
+        <circle cx="1.45" cy="1.45" r="0.48"></circle><circle cx="3.65" cy="1.45" r="0.48"></circle><circle cx="5.85" cy="1.45" r="0.48"></circle><circle cx="8.05" cy="1.45" r="0.48"></circle>
+        <circle cx="2.55" cy="3.2" r="0.48"></circle><circle cx="4.75" cy="3.2" r="0.48"></circle><circle cx="6.95" cy="3.2" r="0.48"></circle><circle cx="9.15" cy="3.2" r="0.48"></circle>
+        <circle cx="1.45" cy="4.95" r="0.48"></circle><circle cx="3.65" cy="4.95" r="0.48"></circle><circle cx="5.85" cy="4.95" r="0.48"></circle><circle cx="8.05" cy="4.95" r="0.48"></circle>
+        <circle cx="2.55" cy="6.7" r="0.48"></circle><circle cx="4.75" cy="6.7" r="0.48"></circle><circle cx="6.95" cy="6.7" r="0.48"></circle><circle cx="9.15" cy="6.7" r="0.48"></circle>
+        <circle cx="1.45" cy="8.45" r="0.48"></circle><circle cx="3.65" cy="8.45" r="0.48"></circle><circle cx="5.85" cy="8.45" r="0.48"></circle><circle cx="8.05" cy="8.45" r="0.48"></circle>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-topline">
+  <div class="topline-inner">
+    <div class="brand">АМТ <span>Ай</span></div>
+    <nav class="language-switcher" aria-label="Выбор языка">
+      <a class="language-link" href="./kk/" hreflang="kk" aria-label="Казахская версия">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-kk"></use></svg>
+      </a>
+      <a class="language-link is-active" href="./index.html" hreflang="ru" aria-current="page" aria-label="Русская версия">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-ru"></use></svg>
+      </a>
+      <a class="language-link" href="./en/" hreflang="en" aria-label="Английская версия (США)">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-us"></use></svg>
+      </a>
+    </nav>
+  </div>
+</header>
 
 <!-- Раздел 1 -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="brand">АМТ <span>Ай</span></div>
     <div class="hero-rule"></div>
     <h1>АМТ Ай — запускаем <em>и развиваем</em> проекты</h1>
     <p>Инвестируем в проекты в сфере недвижимости и реализации строительных материалов и товаров для дома. Развиваем проектные команды, обеспечивая достижение целевой доли рынка.</p>
@@ -280,7 +187,7 @@
   <div class="container">
     <span class="section-label">Участие в проектах</span>
     <h2>Найди проект, в котором захочется создавать</h2>
-    <p class="body-text">Наши проекты могут быть интересны тебе, если ты хочешь видеть результат своей работы, предлагать решения и действовать вместе с командой. Разные направления позволяют найти задачи, близкие твоим интересам и компетенциям. <a href="https://hh.kz/employer/12506091?hhtmFrom=vacancy_search_list&amp;tab=VACANCIES" style="color:var(--terra); font-weight:500;">Вакансии компании на hh.kz</a></p>
+    <p class="body-text">Наши проекты могут быть интересны тебе, если ты хочешь видеть результат своей работы, предлагать решения и действовать вместе с командой. Разные направления позволяют найти задачи, близкие твоим интересам и компетенциям. <a href="https://hh.kz/employer/12506091?hhtmFrom=vacancy_search_list&amp;tab=VACANCIES" target="_blank" rel="noopener" style="color:var(--terra); font-weight:500;">Вакансии компании на hh.kz</a></p>
   </div>
 </section>
 
@@ -308,8 +215,21 @@
 
 <footer>
   <div class="container">
-    <span>© ТОО «АМТ Ай»</span>
-    <span>Недвижимость · Строительные материалы · Товары для дома</span>
+    <nav class="language-switcher" aria-label="Выбор языка">
+      <a class="language-link" href="./kk/" hreflang="kk" aria-label="Казахская версия">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-kk"></use></svg>
+      </a>
+      <a class="language-link is-active" href="./index.html" hreflang="ru" aria-current="page" aria-label="Русская версия">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-ru"></use></svg>
+      </a>
+      <a class="language-link" href="./en/" hreflang="en" aria-label="Английская версия (США)">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-us"></use></svg>
+      </a>
+    </nav>
+    <div class="footer-meta">
+      <span>© ТОО «АМТ Ай»</span>
+      <span>Недвижимость · Строительные материалы · Товары для дома</span>
+    </div>
   </div>
 </footer>
 
