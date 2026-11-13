@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMT Ai — launching and developing projects</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta name="description" content="AMT Ai invests in real estate, construction materials, and home goods projects, develops project teams, and helps businesses achieve their target market share.">
+<link rel="alternate" hreflang="kk" href="../kk/">
+<link rel="alternate" hreflang="ru" href="../">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script src="../settings.js" defer></script>
+</head>
+<body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="flag-kk" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#00AFCA"></rect>
+      <rect x="2.1" width="2.2" height="19" fill="#FEC50C"></rect>
+      <g fill="#00AFCA">
+        <circle cx="3.2" cy="2.6" r="0.62"></circle>
+        <circle cx="3.2" cy="5.8" r="0.62"></circle>
+        <circle cx="3.2" cy="9" r="0.62"></circle>
+        <circle cx="3.2" cy="12.2" r="0.62"></circle>
+        <circle cx="3.2" cy="15.4" r="0.62"></circle>
+      </g>
+      <g stroke="#FEC50C" stroke-width="0.55" stroke-linecap="round">
+        <line x1="14" y1="3.6" x2="14" y2="2"></line>
+        <line x1="14" y1="10.4" x2="14" y2="12"></line>
+        <line x1="10.5" y1="7" x2="8.9" y2="7"></line>
+        <line x1="17.5" y1="7" x2="19.1" y2="7"></line>
+        <line x1="11.5" y1="4.5" x2="10.4" y2="3.4"></line>
+        <line x1="16.5" y1="4.5" x2="17.6" y2="3.4"></line>
+        <line x1="11.5" y1="9.5" x2="10.4" y2="10.6"></line>
+        <line x1="16.5" y1="9.5" x2="17.6" y2="10.6"></line>
+      </g>
+      <circle cx="14" cy="7" r="2.2" fill="#FEC50C"></circle>
+      <path d="M8.3 12.2c1.5-1.2 3-1.4 4.4-.4 1.3-1 2.9-.9 4.5.4-1.3-.1-2.3.2-2.9 1-1.2 1.5-3.1 1.5-4.3 0-.5-.8-.7-1-1.7-1Z" fill="#FEC50C"></path>
+    </symbol>
+    <symbol id="flag-ru" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#FFFFFF"></rect>
+      <rect y="6.34" width="26" height="6.33" fill="#0039A6"></rect>
+      <rect y="12.67" width="26" height="6.33" fill="#D52B1E"></rect>
+    </symbol>
+    <symbol id="flag-us" viewBox="0 0 26 19">
+      <rect width="26" height="19" fill="#FFFFFF"></rect>
+      <g fill="#B31942">
+        <rect width="26" height="1.47"></rect>
+        <rect y="2.93" width="26" height="1.47"></rect>
+        <rect y="5.86" width="26" height="1.47"></rect>
+        <rect y="8.79" width="26" height="1.47"></rect>
+        <rect y="11.72" width="26" height="1.47"></rect>
+        <rect y="14.65" width="26" height="1.47"></rect>
+        <rect y="17.58" width="26" height="1.42"></rect>
+      </g>
+      <rect width="10.4" height="10.27" fill="#0A3161"></rect>
+      <g fill="#FFFFFF">
+        <circle cx="1.45" cy="1.45" r="0.48"></circle><circle cx="3.65" cy="1.45" r="0.48"></circle><circle cx="5.85" cy="1.45" r="0.48"></circle><circle cx="8.05" cy="1.45" r="0.48"></circle>
+        <circle cx="2.55" cy="3.2" r="0.48"></circle><circle cx="4.75" cy="3.2" r="0.48"></circle><circle cx="6.95" cy="3.2" r="0.48"></circle><circle cx="9.15" cy="3.2" r="0.48"></circle>
+        <circle cx="1.45" cy="4.95" r="0.48"></circle><circle cx="3.65" cy="4.95" r="0.48"></circle><circle cx="5.85" cy="4.95" r="0.48"></circle><circle cx="8.05" cy="4.95" r="0.48"></circle>
+        <circle cx="2.55" cy="6.7" r="0.48"></circle><circle cx="4.75" cy="6.7" r="0.48"></circle><circle cx="6.95" cy="6.7" r="0.48"></circle><circle cx="9.15" cy="6.7" r="0.48"></circle>
+        <circle cx="1.45" cy="8.45" r="0.48"></circle><circle cx="3.65" cy="8.45" r="0.48"></circle><circle cx="5.85" cy="8.45" r="0.48"></circle><circle cx="8.05" cy="8.45" r="0.48"></circle>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-topline">
+  <div class="topline-inner">
+    <div class="brand">AMT <span>Ai</span></div>
+    <nav class="language-switcher" aria-label="Language selection">
+      <a class="language-link" href="../kk/" hreflang="kk" aria-label="Kazakh version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-kk"></use></svg>
+      </a>
+      <a class="language-link" href="../index.html" hreflang="ru" aria-label="Russian version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-ru"></use></svg>
+      </a>
+      <a class="language-link is-active" href="./index.html" hreflang="en" aria-current="page" aria-label="English (US) version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-us"></use></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Section 1 -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-rule"></div>
+    <h1>AMT Ai — launching <em>and developing</em> projects</h1>
+    <p>We invest in projects across real estate and the distribution of construction materials and home goods. We develop project teams and support them in achieving their target market share.</p>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section class="people">
+  <div class="container people-grid">
+    <div>
+      <span class="section-label">Team</span>
+      <h2>About the people in our company</h2>
+      <p class="body-text" style="font-size:18px; font-weight:500; color:var(--text); margin-bottom:16px;">You change the cities where you work</p>
+      <p class="body-text">Teamwork allows us to accomplish what no one can achieve alone. By creating synergy and seamless processes within the team, we reach our goals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section class="directions">
+  <div class="container">
+    <span class="section-label">Areas of activity</span>
+    <h2>Three directions — one team</h2>
+    <div class="cards">
+      <div class="card c1">
+        <div class="card-mark">01 — Real estate</div>
+        <h3>Real estate for living and business</h3>
+        <p>We work with residential and commercial properties. We look for solutions that make real estate valuable and in demand: comfortable housing for people, suitable spaces for businesses, and clear economics for project participants.</p>
+      </div>
+      <div class="card c2">
+        <div class="card-mark">02 — Construction materials</div>
+        <h3>Construction materials for building and renovation</h3>
+        <p>We develop sales of materials for construction and renovation. Our goal is to connect customer needs with the right products and build resilient operations for this business area.</p>
+      </div>
+      <div class="card c3">
+        <div class="card-mark">03 — Home goods</div>
+        <h3>Home goods for everyday comfort</h3>
+        <p>We develop a product line that helps people furnish and improve their homes. We focus on real needs: making spaces comfortable, functional, and enjoyable to live in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section class="process">
+  <div class="container">
+    <span class="section-label">How projects are created</span>
+    <h2>We find opportunities. Build teams. Launch businesses.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Identify and assess</h4>
+        <p>We spot unmet demand and opportunities for growth. We test what value we can create and what results we can achieve.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Build a team</h4>
+        <p>We bring people together around a task. Together, we define the product, revenue model, and path to the first results.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Engage the best contractors for delivery</h4>
+        <p>We find the best contractors, reach agreements with them, and launch the project.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Scale what works</h4>
+        <p>We strengthen the team and processes. We capture the target market share and transfer successful solutions to new segments and regions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section class="principles">
+  <div class="container">
+    <span class="section-label">Operating principles</span>
+    <h2>What we build every project on</h2>
+    <div class="principles-grid">
+      <div class="principle">
+        <h3>We secure a meaningful market share</h3>
+        <p>We develop every product with the goal of achieving a meaningful position in its chosen segment. To do this, we study customer needs, create a competitive offering, and consistently scale the business.</p>
+      </div>
+      <div class="principle">
+        <h3>We work as a team</h3>
+        <p>We bring together different competencies around a shared goal. Together, we develop solutions, agree on each person’s contribution, and take responsibility for our part of the overall result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 -->
+<section class="participate">
+  <div class="container">
+    <span class="section-label">Join our projects</span>
+    <h2>Find a project you will want to create</h2>
+    <p class="body-text">Our projects may be a good fit if you want to see the results of your work, propose solutions, and act together with a team. Our different business areas offer tasks that can match your interests and competencies. <a href="https://hh.kz/employer/12506091?hhtmFrom=vacancy_search_list&amp;tab=VACANCIES" target="_blank" rel="noopener" style="color:var(--terra); font-weight:500;">See company vacancies on hh.kz</a></p>
+  </div>
+</section>
+
+<!-- Section 7 -->
+<section class="contacts">
+  <div class="container">
+    <span class="section-label">Contacts and company details</span>
+    <div class="contacts-box">
+      <div>
+        <h3>Company details</h3>
+        <dl>
+          <dt>Organization</dt>
+          <dd>Limited Liability Partnership “AMT Ai”</dd>
+          <dt>BIN</dt>
+          <dd>201140001164</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Email</h3>
+        <a href="mailto:info@amt-ai.com">info@amt-ai.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <nav class="language-switcher" aria-label="Language selection">
+      <a class="language-link" href="../kk/" hreflang="kk" aria-label="Kazakh version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-kk"></use></svg>
+      </a>
+      <a class="language-link" href="../index.html" hreflang="ru" aria-label="Russian version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-ru"></use></svg>
+      </a>
+      <a class="language-link is-active" href="./index.html" hreflang="en" aria-current="page" aria-label="English (US) version">
+        <svg class="flag-icon" aria-hidden="true" focusable="false"><use href="#flag-us"></use></svg>
+      </a>
+    </nav>
+    <div class="footer-meta">
+      <span>© AMT Ai LLP</span>
+      <span>Real Estate · Construction Materials · Home Goods</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
