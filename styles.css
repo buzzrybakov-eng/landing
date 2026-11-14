@@ -15,7 +15,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Golos Text', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Golos Text', 'Noto Sans SC', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
