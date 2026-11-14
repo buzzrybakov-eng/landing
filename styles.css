@@ -2,6 +2,7 @@
   --navy: #1B3A5C;
   --navy-dark: #142C47;
   --terra: #C4743E;
+  --terra-dark: #A95F30;
   --terra-light: #D08A4E;
   --steel: #5B7A99;
   --sage: #8A9A7B;
@@ -34,7 +35,6 @@ section { padding: 88px 0; }
 }
 
 h2 { font-size: 34px; line-height: 1.2; font-weight: 700; margin-bottom: 20px; }
-h2 + .lead { font-size: 18px; color: var(--text-muted); max-width: 640px; }
 p.body-text { color: var(--text-muted); max-width: 640px; }
 
 .visually-hidden {
@@ -78,7 +78,7 @@ p.body-text { color: var(--text-muted); max-width: 640px; }
 
 /* По умолчанию сайт одноязычный: переключатель скрыт.
    settings.js добавляет класс body.multilang, когда в настройках
-   index.html включён режим нескольких языков. */
+   включён режим нескольких языков. */
 .language-switcher {
   display: none;
   align-items: center;
@@ -151,16 +151,12 @@ body.multilang .language-switcher { display: flex; }
   margin: 0 auto;
 }
 
-.hero h1 { font-size: 52px; line-height: 1.12; font-weight: 700; max-width: 720px; margin-bottom: 28px; }
+.hero h1 { font-size: 52px; line-height: 1.12; font-weight: 700; max-width: 780px; margin-bottom: 28px; }
 .hero h1 em { font-style: normal; color: var(--terra-light); }
 .hero p { font-size: 19px; color: rgba(255,255,255,0.78); max-width: 560px; }
 .hero-rule { width: 64px; height: 4px; background: var(--terra); margin-bottom: 32px; }
 
-/* ---------- 2. People ---------- */
-.people { background: var(--white); }
-.people-grid { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: center; }
-
-/* ---------- 3. Directions ---------- */
+/* ---------- 2. Directions ---------- */
 .directions { background: var(--bg-warm); }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
 
@@ -181,83 +177,35 @@ body.multilang .language-switcher { display: flex; }
 .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
 .card p { font-size: 15px; color: var(--text-muted); }
 
-/* ---------- 4. Process ---------- */
-.process { background: var(--white); }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 56px; position: relative; }
-.step { padding-top: 28px; position: relative; }
+/* ---------- 3. Hiring ---------- */
+.hiring { background: var(--navy); color: var(--white); }
+.hiring .section-label { color: var(--terra-light); }
+.hiring h2 { color: var(--white); max-width: 720px; }
+.hiring p { color: rgba(255,255,255,0.78); font-size: 17px; max-width: 640px; margin-bottom: 16px; }
+.hiring p:last-of-type { margin-bottom: 0; }
 
-.step::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 24px;
-  height: 2px;
-  background: #E4E1DC;
-}
-
-.step:first-child::before { background: var(--terra); }
-
-.step-num {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--navy);
+.cta-button {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 16px 32px;
+  background: var(--terra);
   color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 17px;
   font-weight: 700;
-  font-size: 16px;
-  margin: -14px 0 20px;
-  position: relative;
-  z-index: 1;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 180ms ease, background-color 180ms ease;
 }
 
-.step:first-child .step-num { background: var(--terra); }
-.step h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
-.step p { font-size: 14.5px; color: var(--text-muted); }
-
-/* ---------- 5. Principles ---------- */
-.principles { background: var(--navy); color: var(--white); }
-.principles .section-label { color: var(--terra-light); }
-.principles h2 { color: var(--white); }
-.principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
-
-.principle {
-  border-left: 3px solid var(--terra);
-  padding-left: 28px;
+.cta-button:hover {
+  background: var(--terra-dark);
+  transform: translateY(-1px);
 }
 
-.principle h3 { font-size: 21px; font-weight: 700; margin-bottom: 12px; }
-.principle p { color: rgba(255,255,255,0.75); font-size: 15.5px; max-width: 460px; }
+.cta-button:active { transform: translateY(0); }
 
-/* ---------- 6. Participation ---------- */
-.participate { background: var(--bg-warm); text-align: center; }
-.participate p { margin: 0 auto; }
-
-/* ---------- 7. Contacts ---------- */
-.contacts { background: var(--white); }
-
-.contacts-box {
-  background: var(--bg-warm);
-  border-radius: 12px;
-  padding: 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 48px;
-}
-
-.contacts-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
-.contacts-box dl { font-size: 15.5px; }
-.contacts-box dt { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; margin-top: 18px; }
-.contacts-box dt:first-child { margin-top: 0; }
-.contacts-box dd { font-weight: 500; }
-.contacts-box a { color: var(--terra); text-decoration: none; font-size: 20px; font-weight: 700; }
-.contacts-box a:hover { text-decoration: underline; }
-.contacts-box a:focus-visible, .participate a:focus-visible {
-  outline: 3px solid var(--terra);
+.cta-button:focus-visible {
+  outline: 3px solid var(--terra-light);
   outline-offset: 3px;
 }
 
@@ -284,13 +232,23 @@ footer .container {
   gap: 8px 20px;
 }
 
+.footer-meta a {
+  color: var(--terra-light);
+  text-decoration: none;
+}
+
+.footer-meta a:hover { text-decoration: underline; }
+
+.footer-meta a:focus-visible {
+  outline: 3px solid var(--terra);
+  outline-offset: 3px;
+}
+
 @media (max-width: 900px) {
   section { padding: 64px 0; }
   .hero h1 { font-size: 36px; }
   .hero-inner { padding: 120px 24px 80px; }
-  .people-grid, .principles-grid, .contacts-box { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; }
   h2 { font-size: 28px; }
 }
 
@@ -298,6 +256,5 @@ footer .container {
   .site-topline { padding-top: 24px; }
   .topline-inner { gap: 12px; }
   .language-switcher { gap: 4px; }
-  .steps { grid-template-columns: 1fr; }
-  .contacts-box { padding: 32px 24px; }
+  .cta-button { display: block; text-align: center; }
 }
